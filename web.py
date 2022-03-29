@@ -4,6 +4,7 @@ import personalizing as pz
 import requests
 import wikipedia
 import smtplib
+import keys
 
 def Location(query):
     query = query.replace("where is", "")
@@ -74,7 +75,7 @@ def Weather():
     location = sm.TakeCommand()
     if location == "" or "type" in location or location == "None":
         location = input("type a location: ")
-    key = "27638b85eee115cb5d329ee2cd360ade"
+    key = keys.wether_key
     try:
         resp = requests.get('http://api.openweathermap.org/data/2.5/weather?q=' + location + '&APPID=' + key)
         data = resp.json()
