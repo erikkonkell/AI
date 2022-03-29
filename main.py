@@ -1,6 +1,6 @@
 # all are pip installs
 import pyautogui
-import python_weather
+#import python_weather
 # standard libs
 import smtplib
 import asyncio

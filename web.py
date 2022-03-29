@@ -65,7 +65,7 @@ def send(to, content):
     server.ehlo()
     server.starttls()
     # for this function, you must enable lowscurit mode
-    server.login("bob94.samsson@gmail.com", 'sasdDASDre342#"22')
+    server.login("bob94.samsson@gmail.com", keys.email_key)
     server.sendmail("bob94.samsson@gmail.com", to, content)
     server.close()
 
